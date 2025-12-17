@@ -19,6 +19,6 @@ public class CartTest extends BaseTest {
         home.goToCart();
 
         String title = driver.findElement(By.className("inventory_item_name")).getText();
-        Assert.assertEquals(title, "Sauce Labs ");
+        Assert.assertEquals(title, "Sauce Labs Backpack");
     }
 }

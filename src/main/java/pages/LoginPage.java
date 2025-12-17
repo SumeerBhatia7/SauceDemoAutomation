@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.WaitUtils;
 
 public class LoginPage {
 
@@ -15,7 +16,7 @@ public class LoginPage {
     By loginBtn = By.id("login-button");
 
     public void enterUsername(String user){
-        driver.findElement(username).sendKeys("error_user");
+        driver.findElement(username).sendKeys("standard_user");
     }
 
     public void enterPassword(String pass){
@@ -25,6 +26,7 @@ public class LoginPage {
 
 
     public void clickLogin(){
+        WaitUtils.waitForElementClickable(driver, loginBtn);
         driver.findElement(loginBtn).click();
     }
 
